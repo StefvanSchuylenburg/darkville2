@@ -1,1 +1,3 @@
-# darkville2
+# Darkville
+
+Darkville is a game where the players find themselves in a small village. There is one problem with this village: some of the villagers are werewolves during the night. Those werewolves will eat one of the innocent villagers each night. To prevent this the citizens of Darkville have decided to hold a voting for who they think are the werewolves. The villager that got elected will be lynched, hoping that this villager was a werewolf.
