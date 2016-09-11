@@ -38,5 +38,5 @@ dependencies {
  * Task that is used by Heroku to build all files
  */
 task stage {
-    dependsOn clean, build
+    dependsOn build
 }
