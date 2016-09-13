@@ -10,10 +10,6 @@ import org.springframework.web.servlet.ModelAndView
 @Controller
 class HomeController {
 
-    /**
-     * The home page.
-     */
     @RequestMapping("/")
-    fun home(): ModelAndView = ModelAndView("home")
-            .addObject("body", "Hello World!")
+    fun index(): ModelAndView = ModelAndView("home")
 }
