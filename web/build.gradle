@@ -32,8 +32,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.springframework.boot:spring-boot-starter-web:$spring_boot_version"
     compile "org.springframework.boot:spring-boot-starter-thymeleaf:$spring_boot_version"
+    compile "org.springframework.boot:spring-boot-starter-security:$spring_boot_version"
 
-    // web dependencies
+    // front-end dependencies
     compile 'org.webjars:bootstrap:3.3.7'
     compile 'org.webjars:jquery:3.1.0'
     compile 'org.webjars:bootswatch-slate:3.3.5'
