@@ -1,4 +1,4 @@
-package me.darkville.web
+package me.darkville.web.config
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Configuration
@@ -12,12 +12,11 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * For now this is using a fixed set of accounts/passwords.
  */
 @Configuration
-@EnableWebSecurity
 open class WebSecurityConfig : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity) {
         http.authorizeRequests()
                 .antMatchers("/games/**").authenticated()
-                .and().formLogin()
+                .and().formLogin().loginPage("/login")
     }
 
     @Autowired

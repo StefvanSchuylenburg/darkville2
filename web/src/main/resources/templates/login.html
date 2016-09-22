@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons :: header(#{home.title})">
+    <title>Login</title>
+</head>
+<body>
+
+<nav th:replace="fragments/commons :: navbar"/>
+
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-md-6">
+            <form name="f" th:action="@{/login}" method="post">
+                <fieldset>
+                    <div th:if="${param.error}" th:text="#{login.alert.error}" class="alert alert-danger">
+                        Invalid username and password.
+                    </div>
+                    <div th:if="${param.logout}" th:text="#{login.alert.logout}" class="alert alert-success">
+                        You have been logged out.
+                    </div>
+                    <div class="form-group">
+                        <label th:text="#{login.field.username}" for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username"/>
+                    </div>
+                    <div class="form-group">
+                        <label th:text="#{login.field.password}" for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"/>
+                    </div>
+                    <button th:text="#{login.submit}" type="submit" class="btn btn-default">Log in</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div th:replace="fragments/commons :: scripts"/>
+</body>
+</html>
